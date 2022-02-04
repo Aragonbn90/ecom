@@ -1,0 +1,56 @@
+{
+  "changelogDate": "20220204122145",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "discountPercent",
+      "fieldType": "Float",
+      "fieldValidateRules": ["min", "max"],
+      "fieldValidateRulesMax": "100",
+      "fieldValidateRulesMin": "0"
+    },
+    {
+      "fieldName": "newPrice",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "instructions",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "netQuantity",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "netQuantityUnit",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "imageUrls",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ingredients",
+      "fieldType": "String"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Product",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

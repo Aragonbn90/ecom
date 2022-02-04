@@ -1,0 +1,52 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="orderProduct">
+      <h2 data-cy="orderProductDetailsHeading"><span jhiTranslate="ecomApp.orderProduct.detail.title">Order Product</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ orderProduct.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="ecomApp.orderProduct.price">Price</span></dt>
+        <dd>
+          <span>{{ orderProduct.price }}</span>
+        </dd>
+        <dt><span jhiTranslate="ecomApp.orderProduct.quantity">Quantity</span></dt>
+        <dd>
+          <span>{{ orderProduct.quantity }}</span>
+        </dd>
+        <dt><span jhiTranslate="ecomApp.orderProduct.total">Total</span></dt>
+        <dd>
+          <span>{{ orderProduct.total }}</span>
+        </dd>
+        <dt><span jhiTranslate="ecomApp.orderProduct.order">Order</span></dt>
+        <dd>
+          <div *ngIf="orderProduct.order">
+            <a [routerLink]="['/order', orderProduct.order?.id, 'view']">{{ orderProduct.order?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="ecomApp.orderProduct.product">Product</span></dt>
+        <dd>
+          <div *ngIf="orderProduct.product">
+            <a [routerLink]="['/product', orderProduct.product?.id, 'view']">{{ orderProduct.product?.name }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/order-product', orderProduct.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

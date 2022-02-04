@@ -1,0 +1,28 @@
+{
+  "ecomApp": {
+    "orderProduct": {
+      "home": {
+        "title": "Order Products",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Order Product",
+        "createOrEditLabel": "Create or edit a Order Product",
+        "notFound": "No Order Products found"
+      },
+      "created": "A new Order Product is created with identifier {{ param }}",
+      "updated": "A Order Product is updated with identifier {{ param }}",
+      "deleted": "A Order Product is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Order Product {{ id }}?"
+      },
+      "detail": {
+        "title": "Order Product"
+      },
+      "id": "ID",
+      "price": "Price",
+      "quantity": "Quantity",
+      "total": "Total",
+      "order": "Order",
+      "product": "Product"
+    }
+  }
+}
